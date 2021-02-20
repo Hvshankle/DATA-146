@@ -77,10 +77,16 @@ While the following would yield "False"
 (2 < 3) ^ (4 < 5)
 ```
 ### Q7: Describe the difference between .loc and .iloc. Provide an example of how to extract a series of consecutive observations from a data frame. Stretch goal: provide an example of how to extract all observations from a series of consecutive columns.
-Answer 7
+The difference between .loc and .iloc is ____.  
+With .iloc, you can pull specific columns, using a colon between the column numbers [2: 5: 7]
+
 ### Q8: Describe how an api works. Provide an example of how to construct a request to a remote server in order to pull data, write it to a local file and then import it to your current work session.
 Answer 8
-### Q9: Describe the apply() function from the pandas library. What is its purpose? Using apply) to various class objects is an alternative (potentially preferable approach) to writing what other type of command? Why do you think apply() could be a preferred approach?
-Answer 9
+### Q9: Describe the apply() function from the pandas library. What is its purpose? Using apply() to various class objects is an alternative (potentially preferable approach) to writing what other type of command? Why do you think apply() could be a preferred approach?
+The apply() function from pandas is comparable to writing a loop, but many data scientists argue it's a faster approach because it doesn't ___ . (search every singel thing??)
 ### Q10: Also describe an alternative approach to filtering the number of columns in a data frame. Instead of using .iloc, what other approach might be used to select, filter and assign a subset number of variables to a new data frame?
-Answer 10
+Instead of using .iloc, an individual could employ cols and specify any specific columsn they wanted to see. 
+For example:
+```
+cols = ['date', 'state','positive', 'death']
+```
