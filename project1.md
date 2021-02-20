@@ -1,6 +1,11 @@
 ## Project 1
 ### Q1: Describe what is a package? Also, describe what is a library? What are the two steps you need to execute in order to install a package and then make that library of functions accessible to your workspace and current python work session? Provide examples of how you would execute these two steps using two of the packages we have used in class thus far. Be sure to include an alias in at least one of your two examples and explain why it is a good idea to do so.
-Answer 1
+A package is something that organizes classes of the same ilk, keeping them together similar to a folder. A library is a grouping of functions which can be called and added to your workspace. The 2 steps necessary to install a package and then make the library of functions accessible to workspace are (not including installing python or the IDE): importing a package and then applying it in the workspace.  
+This is an example of using an alias
+```
+import pandas as pd
+df = pd.read_csv(file_name)
+``` 
 ### Q2: Describe what is a data frame? Identify a library of functions that is particularly useful for working with data frames. In order to read a file in its remote location within the file system of your operating system, which command would you use? Provide an example of how to read a file and import it into your work session in order to create a new data frame. Also, describe why specifying an argument within a read_() function can be significant. Does data that is saved as a file in a different type of format require a particular argument in order for a data frame to be successfully imported? Also, provide an example that describes a data frame you created. How do you determine how many rows and columns are in a data frame? Is there an alternate terminology for describing rows and columns?
 Answer 2
 ### Q3: Import the gapminder.tsv data set and create a new data frame. Interrogate and describe the year variable within the data frame you created. Does this variable exhibit regular intervals? If you were to add new outcomes to the raw data in order to update and make it more current, which years would you add to each subset of observations? Stretch goal: can you identify how many new outcomes in total you would be adding to your data frame?
