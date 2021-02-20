@@ -11,6 +11,7 @@ The following is an example of using an alias. An alias is used in place of anot
 import pandas as pd
 df = pd.read_csv(file_name)
 ``` 
+
 ### Q2: Describe what is a data frame? Identify a library of functions that is particularly useful for working with data frames. In order to read a file in its remote location within the file system of your operating system, which command would you use? Provide an example of how to read a file and import it into your work session in order to create a new data frame. Also, describe why specifying an argument within a read_() function can be significant. Does data that is saved as a file in a different type of format require a particular argument in order for a data frame to be successfully imported? Also, provide an example that describes a data frame you created. How do you determine how many rows and columns are in a data frame? Is there an alternate terminology for describing rows and columns?
 A data frame is a way to hold data in a set of meaningful columns and rows. The library pandas is very useful when working with data frames. 
 To read a file in its remote location within the file system of my operating system, I would assign the file path to file_name:
@@ -24,6 +25,7 @@ df = pd.read_csv(file_name)
 ```
 Specifying an argument within a read_() function can be significant because ____.
 Data that is saved in a format other than csv may require a different argument, or it can be changed into a .csv format in order to be read by a read_csv() argument. To determine how many rows and columns I've created, 
+
 ### Q3: Import the gapminder.tsv data set and create a new data frame. Interrogate and describe the year variable within the data frame you created. Does this variable exhibit regular intervals? If you were to add new outcomes to the raw data in order to update and make it more current, which years would you add to each subset of observations? Stretch goal: can you identify how many new outcomes in total you would be adding to your data frame?
 ```
 import pandas as pd
@@ -35,13 +37,45 @@ There are 12 year options, spread apart by 5 years between each: (1952, 1957, 19
 I'm not fully certain what is meant by "number of new outcomes," but given that no new countries or continents would be added and the same 2 years would be kept constant across all included countries, this suggests that the only "new outcomes" would be Life Expectancy (LifeExp), population (pop), and Gross Domestic Product Per Capita (gdpPercap). One new "outcome" for each column (LifeExp, pop, and gdpPercap) would be added for each country across the new years (2012, 2017). In total, this would add 1,704 column/row points, but only 852 would be new (as country, continent, and year would be repeating). This is: 3 * 142 * 2.
 To identify how many new outcomes this would add to the data frame, you need only multiply the number of new years (2) by the number of columns that would provide unique info (3) by the number of countries total (142). 
 
-Answer 3
 ### Q4: Using the data frame you created by importing the gapminder.tsv data set, determine which country at what point in time had the lowest life expectancy. Conduct a cursory level investigation as to why this was the case and provide a brief explanation in support of your explanation.
-Answer 4
+Rwanda had the lowest life expectancy in 1992, which is most likely attributable to the Rwandan Civil War. After the RPF, consisting primarily of Tutsi individuals, invaded Rwanda (then controlled by Hutu individuals), the Rwandan government arrested and/or massacred Tutsi individuals in Rwanda for periods of time until 1993, before then conducting the Rwandan Genocide in 1994. 
+
 ### Q5: Using the data frame you created by importing the gapminder.tsv data set, multiply the variable pop by the variable gdpPercap and assign the results to a newly created variable. Then subset and order from highest to lowest the results for Germany, France, Italy and Spain in 2007. Create a table that illustrates your results (you are welcome to either create a table in markdown or plot/save in PyCharm and upload the image). Stretch goal: which of the four European countries exhibited the most significant increase in total gross domestic product during the previous 5-year period (to 2007)?
 Answer 5
 ### Q6: You have been introduced to four logical operators thus far: &, ==, | and ^. Describe each one including its purpose and function. Provide an example of how each might be used in the context of programming.
-Answer 6
+& is an operator which indicates both A and B are true.
+Thus, the following would yield "True"
+```
+(2 + 2 == 4) & (5 < 7) 
+```
+And, the following would yield "False"
+```
+(2 - 2 == 4) & (5 < 7) 
+```
+
+== is an operator used for indicating equality.
+Thus, the following would yield "True"
+```
+a = 2
+a * 2 + 3 == 7
+```
+
+| is an inclusive OR operator, indicating either A or B (or both) is true.  
+Thus, the following 2 instances would yield "True"
+
+```
+(2 > 3) | (4 < 5)
+(2 < 3) | (4 < 5)
+```
+^ is an exculsive OR operator, indicating only A or B (NOT A and B) is true.
+Thus, the following would yield "True"
+```
+(2 > 3) ^ (4 < 5)
+```
+While the following would yield "False"
+```
+(2 < 3) ^ (4 < 5)
+```
 ### Q7: Describe the difference between .loc and .iloc. Provide an example of how to extract a series of consecutive observations from a data frame. Stretch goal: provide an example of how to extract all observations from a series of consecutive columns.
 Answer 7
 ### Q8: Describe how an api works. Provide an example of how to construct a request to a remote server in order to pull data, write it to a local file and then import it to your current work session.
