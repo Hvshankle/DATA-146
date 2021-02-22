@@ -23,8 +23,11 @@ To read a file and import it into my work session in order to create a new data 
 ```
 df = pd.read_csv(file_name)
 ```
-Specifying an argument within a read_() function can be significant because ____.
-Data that is saved in a format other than csv may require a different argument, or it can be changed into a .csv format in order to be read by a read_csv() argument. To determine how many rows and columns I've created, 
+Data that is saved in a format other than csv can be changed into a .csv format in order to be read by a read_csv() argument. To determine how many rows and columns I've created, use the following, with df for DataFrame:
+```
+len(df.columns)
+len(df.rows)
+```
 
 ### Q3: Import the gapminder.tsv data set and create a new data frame. Interrogate and describe the year variable within the data frame you created. Does this variable exhibit regular intervals? If you were to add new outcomes to the raw data in order to update and make it more current, which years would you add to each subset of observations? Stretch goal: can you identify how many new outcomes in total you would be adding to your data frame?
 ```
@@ -77,13 +80,17 @@ While the following would yield "False"
 (2 < 3) ^ (4 < 5)
 ```
 ### Q7: Describe the difference between .loc and .iloc. Provide an example of how to extract a series of consecutive observations from a data frame. Stretch goal: provide an example of how to extract all observations from a series of consecutive columns.
-The difference between .loc and .iloc is ____.  
-With .iloc, you can pull specific columns, using a colon between the column numbers [2: 5: 7]
+For .loc, we have to use the row or column names, whereas with .iloc we use the row or column numbers.  
 
 ### Q8: Describe how an api works. Provide an example of how to construct a request to a remote server in order to pull data, write it to a local file and then import it to your current work session.
-Answer 8
+An API is an Application Programming Interface. It works by providing a way for two servers to "communicate" or share data.
+You can create an alias for a url connecting to the data.
+```
+url = "https://api.covidtracking.com/v1/states/daily.csv"
+```
 ### Q9: Describe the apply() function from the pandas library. What is its purpose? Using apply() to various class objects is an alternative (potentially preferable approach) to writing what other type of command? Why do you think apply() could be a preferred approach?
-The apply() function from pandas is comparable to writing a loop, but many data scientists argue it's a faster approach because it doesn't ___ . (search every singel thing??)
+The apply() function from pandas is used to apply another function to a DataFrame. It is comparable to writing a loop, but many data scientists argue it's a faster approach because it doesn't ___ . (search every singel thing??)
+
 ### Q10: Also describe an alternative approach to filtering the number of columns in a data frame. Instead of using .iloc, what other approach might be used to select, filter and assign a subset number of variables to a new data frame?
 Instead of using .iloc, an individual could employ cols and specify any specific columsn they wanted to see. 
 For example:
