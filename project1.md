@@ -92,7 +92,7 @@ url = "https://api.covidtracking.com/v1/states/daily.csv"
 The apply() function from pandas is used to apply another function to a DataFrame. It is comparable to writing a loop, but many data scientists argue it's a faster approach because it doesn't ___ . (search every singel thing??)
 
 ### Q10: Also describe an alternative approach to filtering the number of columns in a data frame. Instead of using .iloc, what other approach might be used to select, filter and assign a subset number of variables to a new data frame?
-Instead of using .iloc, an individual could employ cols and specify any specific columsn they wanted to see. 
+Instead of using .iloc, an individual could employ cols and specify any specific columns they wanted to see. 
 For example:
 ```
 cols = ['date', 'state','positive', 'death']
